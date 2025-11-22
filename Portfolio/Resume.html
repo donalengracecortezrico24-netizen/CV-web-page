@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CV</title>
+  <title>My CV - Donalen Grace C. Rico</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       margin: 0;
-      background: #f2f4f8;
+      background: linear-gradient(135deg, #e8f5e8 0%, #fff3e0 100%); 
       line-height: 1.6;
-      color: #222;
+      color: #333;
     }
 
     .container {
@@ -18,29 +18,36 @@
       margin: 40px auto;
       background: #fff;
       padding: 60px 80px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
     }
 
     h1 {
-      color: #1a2b63;
+      color: #2c7d6e; 
       margin-bottom: 10px;
       text-align: center;
-      font-size: 2.4rem;
+      font-size: 2.8rem;
+      font-weight: bold;
     }
 
     h2 {
-      padding-bottom: 5px;
-      margin-top: 20px;
-      color: #003366; 
+      padding-bottom: 10px;
+      margin-top: 30px;
+      color: #ff6b6b; 
       font-weight: bold;
-      font-size: 22px;
-      text-align: left;
+      font-size: 24px;
+      border-bottom: 2px solid #feca57;
+      display: inline-block;
     }
 
     p {
       font-size: 16px;
-      margin: 10px 0;
+      margin: 15px 0;
       text-align: justify;
     }
 
@@ -49,202 +56,296 @@
     }
 
     li {
-      margin: 5px 0;
+      margin: 8px 0;
     }
 
     img {
-      width: 150px;       
+      width: 150px;
       height: 150px;
-      object-fit: cover;   
-      border: 2px solid #003366; 
-      border-radius: 5px;  
-      float: left;       
-      margin: 0 20px 20px 0; 
+      object-fit: cover;
+      border: 3px solid #2c7d6e; 
+      border-radius: 50%;
+      float: left;
+      margin: 0 30px 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-
 
     address {
       text-align: center;
       font-style: normal;
       margin-bottom: 20px;
-      font-size: 15px;
+      font-size: 16px;
     }
 
     a {
       text-decoration: none;
-      color: #1a2b63;
+      color: #2c7d6e; 
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     a:hover {
+      color: #ff6b6b; 
       text-decoration: underline;
     }
 
     hr {
       border: none;
-      height: 1px;
-      background: #ccc;
-      margin: 30px 0;
+      height: 2px;
+      background: linear-gradient(to right, #2c7d6e, #ff6b6b); 
+      margin: 40px 0;
     }
 
     blockquote {
       font-style: italic;
-      color: #444;
-      border-left: 4px solid #1a2b63;
-      padding-left: 12px;
-      margin: 15px 0;
+      color: #555;
+      border-left: 5px solid #feca57; 
+      padding-left: 15px;
+      margin: 20px 0;
+      background: #fff8e1; 
+      padding: 15px;
+      border-radius: 5px;
     }
 
-    table { 
+    mark {
+      background-color: #feca57; 
+      color: #333;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    table {
       margin: 20px auto;
       border-collapse: collapse;
       width: 100%;
       border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    
+
     td, th {
-      padding: 12px;
+      padding: 15px;
       text-align: left;
       border: 1px solid #ddd;
     }
 
     th {
-      background: #1a2b63;
+      background: #2c7d6e; 
       color: #fff;
       font-weight: bold;
     }
 
-    form {
-      margin: 15px 0;
-      font-size: 15px;
-    }
-
-    input[type="checkbox"] {
-      margin-right: 6px;
-    }
-
-    select {
-      padding: 6px 10px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    ol {
-      list-style: none; 
+    .interests {
+      list-style: none;
       padding: 0;
-      text-align: center; 
-
-    ol li {
-      display: inline-block; 
-      background: #003366; 
-      color: #fff;
-      padding: 8px 18px;
-      margin: 6px;
-      border-radius: 25px; 
-      font-size: 15px;
-      font-weight: bold;
-      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-      transition: 0.2s;
+      text-align: center;
     }
 
-    ol li:hover {
-      background: #001f4d; 
+    .interests li {
+      display: inline-block;
+      background: #ff6b6b; 
+      color: #fff;
+      padding: 10px 20px;
+      margin: 8px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+
+    .interests li:hover {
+      background: #e55a5a; 
+      transform: scale(1.05);
+    }
+
+    .progress-section {
+      background: #fff8e1;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 40px;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+      table {
+        font-size: 14px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .container {
+        box-shadow: none;
+        margin: 0;
+      }
+      .interests li {
+        background: none;
+        color: black;
+        border: 1px solid black;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="DONS.jpg.jpg" alt="My Photo">
-    <h1>DONALEN GRACE C. RICO</h1>
-    <address> 
+    <img src="DONS.jpg.jpg" alt="Photo of Donalen Grace C. Rico">
+    <h1>Donalen Grace C. Rico</h1>
+    <address>
       <b>Daraga, Albay</b><br>
-      +63915-008-5830<br>
-      <a href="mailto:donalengracerico@email.com">donalengracecortez.rico24@bicol-u.edu.ph</a>
+      +63 915-008-5830<br>
+      <a href="mailto:donalengracecortez.rico24@bicol-u.edu.ph">donalengracecortez.rico24@bicol-u.edu.ph</a>
     </address>
     <hr>
 
-    <h2>About Me</h2>
-    <p>Hello, My name is <b>Donalen Grace C. Rico.</b> I am currently exploring the world of programming, focusing on <strong><i><u>HTML and CSS</u></i></strong>.
-    I am eager about developing innovative solutions and expanding my knowledge in <i>Information Technology</i>, particularly in web development.</p>
-    <p>I love <mark>laying out</mark>, because I believe:</p> 
-    <blockquote>"It's an art form that brings ideas to life."</blockquote>
+    <section>
+      <h2>About Me</h2>
+      <p>Hello! I'm <b>Donalen Grace C. Rico</b>, a passionate student exploring the dynamic world of programming with a focus on <strong><i><u>HTML and CSS</u></i></strong>. I'm dedicated to developing innovative web solutions and expanding my expertise in <i>Information Technology</i>, particularly in responsive web development. Through hands-on projects, I've grown from basics to creating interactive, user-friendly designs.</p>
+      <p>I love <mark>laying out designs</mark>, because I believe:</p>
+      <blockquote>"It's an art form that brings ideas to life."</blockquote>
+    </section>
 
     <hr>
-    <h2>Personal Information</h2>
-    <ul> 
-      <li><b>Name:</b> Donalen Grace C. Rico</li>
-      <li><b>Age:</b> 19 years old</li>
-      <li><b>Date of Birth:</b> March 03, 2006</li> 
-      <li><b>Address:</b> Daraga, Albay</li>
-      <li><b>Contact Number:</b> 0915-008-5830</li>
-      <li><b>Place of Birth:</b> Taguig City</li> 
-      <li><b>Civil Status:</b> Single</li> 
-      <li><b>Sex:</b> Female</li>
-    </ul>
 
-    <form>  
-      <p><b>Dialect Spoken:</b></p> 
-      <input type="checkbox" name="dialect" value="english"> English
-      <input type="checkbox" name="dialect" value="tagalog"> Tagalog
-      <input type="checkbox" name="dialect" value="spanish"> Spanish 
-    </form> 
-
-    <form> 
-      <label for="country"><b>Select Country:</b></label> 
-      <select id="country"> 
-        <option>Philippines</option> 
-        <option>Japan</option> 
-        <option>USA</option> 
-      </select> 
-    </form>
+    <section>
+      <h2>Recent Progress & Achievements</h2>
+      <div class="progress-section">
+        <p>Since starting my journey in web development, I've improved my HTML and CSS skills. Here's my progress:</p>
+        <ul>
+          <li><b>HTML/CSS:</b> Completed multiple projects, including this responsive CV, showing skills in markup and styling.</li>
+          <li><b>Skills Learned:</b> Advanced from basic C++ to integrating Figma for UI/UX design in web projects.</li>
+          <li><b>Recent Milestone:</b> Built a prototype for "Book Beats" using Figma.</li>
+          <li><b>Future Goals:</b> Aim to learn JavaScript for interactivity and contribute to web projects.</li>
+        </ul>
+      </div>
+    </section>
 
     <hr>
-    <h2>Education</h2>
-    <p><b>Bachelor of Science in Information System</b><br>
-    Bicol University (2024-Present)</p>
 
-    <h2>Skills, Experience & Projects</h2>
-    <table> 
-      <tr> 
-        <th>Skills</th> 
-        <th>Experiences</th> 
-        <th>Projects</th>
-      </tr> 
-      <tr> 
-        <td>
-          <ul> 
-            <li>Arts and Design</li> 
-            <li>C++ Basics</li> 
-            <li>Figma</li> 
-            <li>HTML and CSS</li>
-          </ul>
-        </td> 
-        <td>
-          <b>Student Projects</b>
-          <ul>
-            <li>Learned Basic C++ - Bicol University Polangui (2024-2025)</li>
-            <li>Learned Basic FIGMA - Bicol University Polangui (2024-2025)</li>
-          </ul>
-        </td>
-        <td>
-          <ul>
-            <li>Book Beats Prototype (Figma)</li>
-            <li>Database Management System</li>
-            <li>Web Development</li>
-          </ul>
-        </td>
-      </tr> 
-    </table>
+    <section>
+      <h2>Personal Information</h2>
+      <ul>
+        <li><b>Name:</b> Donalen Grace C. Rico</li>
+        <li><b>Age:</b> 19 years old</li>
+        <li><b>Date of Birth:</b> March 03, 2006</li>
+        <li><b>Address:</b> Daraga, Albay</li>
+        <li><b>Place of Birth:</b> Taguig City</li>
+        <li><b>Civil Status:</b> Single</li>
+        <li><b>Sex:</b> Female</li>
+      </ul>
+      <p><b>Dialects Spoken:</b> English, Tagalog, Spanish</p>
+      <p><b>Preferred Country:</b> Philippines</p>
+    </section>
 
-    <h2>Interests</h2>
-    <ul class="interests">
+    <hr>
+
+    <section>
+      <h2>Education</h2>
+      <p><b>Bachelor of Science in Information Systems</b><br>
+      Bicol University (2024–Present)<br>
+      <em>Focus: Web Development, Database Management, and IT Fundamentals</em></p>
+      <p><b>Senior High School</b><br>
+      Malabog National High School (2022–2024)<br>
+      <em>Strand: STEM (Science, Technology, Engineering, and Mathematics)</em></p>
+      <p><b>Junior High School</b><br>
+      Malabog National High School (2019–2022)<br>
+      <em>Achievement: Graduated with Honors</em></p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Certifications & Awards</h2>
+      <ul>
+        <li><b>School Award:</b> Outstanding Performance in Arts (Senior High School, 2022)</li>
+        <em>Award for Research and Innovation (Senior High School, 2024)</em>
+        <li><b>Participation Certificate:</b> Children International Bicol Inc. (2025)</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Skills</h2>
+      <p>As a beginner in programming, I'm building foundational skills through practice and coursework:</p>
+      <ul>
+        <li><b>Arts and Design:</b> Creating visual concepts and layouts</li>
+        <li><b>C++ Basics:</b> Understanding programming logic and simple code</li>
+        <li><b>Figma:</b> Basic UI/UX prototyping</li>
+        <li><b>HTML and CSS:</b> Building and styling web pages</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Experience & Projects</h2>
+      <table>
+        <tr>
+          <th>Experiences</th>
+          <th>Projects</th>
+        </tr>
+        <tr>
+          <td>
+            <b>Student Projects</b>
+            <ul>
+              <li>Learned Basic C++ – Bicol University Polangui (2024–2025)</li>
+              <li>Learned Basic Figma – Bicol University Polangui (2024–2025)</li>
+              <li>Ongoing: HTML/CSS Web Development Practice</li>
+            </ul>
+            <b>Extracurricular Activities</b>
+            <ul>
+              <li>Member of the IE Program Relations Committee (2024–Present)</li>
+              <li>Volunteer in Community Youth Sessions (2022-Present)</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><b>Book Beats Prototype:</b> Designed in Figma; translated to HTML/CSS for a music-book app interface. Focused on user-friendly layouts.</li>
+              <li><b>Database Management System:</b> Conceptual design for data handling in web apps; learned basic SQL integration.</li>
+              <li><b>Web Development Portfolio:</b> This CV – showcases responsive design and CSS animations. Built from scratch as a beginner project.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Interests</h2>
+      <ul class="interests">
         <li>Web Development</li>
         <li>Instruments</li>
         <li>Reading</li>
         <li>Arts and Design</li>
-        <li>Eating</li>
-        <li>Sleeping</li>
-    </ul>
+      </ul>
+    </section>
+
+    <hr>
+
+    <div class="footer">
+      <p>Thank you for reviewing my CV! I'm excited to continue growing in IT. <a href="mailto:donalengracecortez.rico24@bicol-u.edu.ph">Let's connect</a>.</p>
+    </div>
   </div>
 </body>
 </html>
