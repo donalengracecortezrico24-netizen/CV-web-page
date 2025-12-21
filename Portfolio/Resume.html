@@ -1,351 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CV - Donalen Grace C. Rico</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donalen Grace C. Rico — CV</title>
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      margin: 0;
-      background: linear-gradient(135deg, #e8f5e8 0%, #fff3e0 100%); 
-      line-height: 1.6;
-      color: #333;
+    
+    .resume{
+      max-width:980px;
+      margin:0 auto;
+      background:#ffffff;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 18px 40px rgba(0,0,0,0.12);
+      display:grid;
+      grid-template-columns:1fr 285px; 
+    }
+    /* Header section at the top */
+    .header{
+      grid-column:1 / -1; 
+      display:flex;
+      justify-content:space-between;
+      padding:28px 36px;
+      background:linear-gradient(90deg, rgba(0,51,102,0.06), rgba(74,144,226,0.1)); 
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+    .header-left{display:flex;flex-direction:column;gap:6px;}
+    .name{font-size:30px;color:#003366;font-weight:700;margin:0;}
+    .title{font-size:15px;color:#4A90E2;font-weight:700;margin:0;}
+    .header-right{text-align:right;font-size:15px;color:#666666;}    
+    .header-right a{color:#003366;font-weight:700;text-decoration:none;}
+
+    .main{padding:30px 36px;}
+    .sidebar{padding:30px 28px;background:linear-gradient(180deg, rgba(224,224,224,0.4), rgba(255,255,255,0));border-left:1px solid rgba(114, 27, 27, 0.04);}
+
+    .photo-wrap{text-align:center;margin-bottom:18px;}
+    .photo{
+      width:220px;height:220px;object-fit:cover;
+      border-radius:4px;border:2px solid #003366;
+      box-shadow:0 8px 20px rgba(0,0,0,0.14);
     }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 60px 80px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+    h2{
+      font-size:25px;color:#003366;
+      margin:0 0 10px 0;font-weight:700;
+      border-bottom:2px solid #B0C4DE;
+      display:inline-block;padding-bottom:6px;
     }
 
-    .container:hover {
-      transform: translateY(-5px);
+    .box{
+      background:#F0F8FF;
+      padding:15px;border-radius:10px;
+      margin:18px 0 18px 0;
     }
 
-    h1 {
-      color: #2c7d6e; 
-      margin-bottom: 10px;
-      text-align: center;
-      font-size: 2.8rem;
-      font-weight: bold;
+    p, li {font-size:18px;color:#222;}
+    ul.clean{margin:8px 0 0 18px;padding:0;}
+    ul.clean li{margin:6px 0;}
+
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:1px;}
+    .pill{
+      padding:8px 12px;border-radius:999px;
+      background:#003366;color:white;font-weight:600;font-size:13px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.06);
     }
 
-    h2 {
-      padding-bottom: 10px;
-      margin-top: 30px;
-      color: #ff6b6b; 
-      font-weight: bold;
-      font-size: 24px;
-      border-bottom: 2px solid #feca57;
-      display: inline-block;
+    .exp-item{margin-bottom:14px;}
+    .exp-head{display:flex;justify-content:space-between;gap:12px;}
+    .exp-role{font-weight:700;color:#003366;}    
+    .exp-company{font-size:18px;color:#444;margin-top:4px;}
+    .exp-dates{font-size:15px;color:#666666;white-space:nowrap;}
+
+    .interests{display:flex;flex-wrap:wrap;gap:8px;margin-top:1px;}
+    .interest{
+      padding:8px 12px;border-radius:999px;
+      background:#003366;color:white;
+      font-weight:600;font-size:13px;
     }
 
-    p {
-      font-size: 16px;
-      margin: 15px 0;
-      text-align: justify;
+    .footer{
+      grid-column:1 / -1;text-align:center;
+      padding:16px;font-size:13px;color:#666666;
+      border-top:1px solid rgba(0,0,0,0.03);
     }
 
-    ul, ol {
-      margin-left: 25px;
+    @media(max-width:900px){
+      .resume{grid-template-columns:1fr;} 
+      .sidebar{border-left:none;border-top:1px solid rgba(0,0,0,0.04);}    
     }
 
-    li {
-      margin: 8px 0;
-    }
-
-    img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border: 3px solid #2c7d6e; 
-      border-radius: 50%;
-      float: left;
-      margin: 0 30px 20px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    address {
-      text-align: center;
-      font-style: normal;
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #2c7d6e; 
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #ff6b6b; 
-      text-decoration: underline;
-    }
-
-    hr {
-      border: none;
-      height: 2px;
-      background: linear-gradient(to right, #2c7d6e, #ff6b6b); 
-      margin: 40px 0;
-    }
-
-    blockquote {
-      font-style: italic;
-      color: #555;
-      border-left: 5px solid #feca57; 
-      padding-left: 15px;
-      margin: 20px 0;
-      background: #fff8e1; 
-      padding: 15px;
-      border-radius: 5px;
-    }
-
-    mark {
-      background-color: #feca57; 
-      color: #333;
-      padding: 2px 4px;
-      border-radius: 3px;
-    }
-
-    table {
-      margin: 20px auto;
-      border-collapse: collapse;
-      width: 100%;
-      border: 1px solid #ddd;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    td, th {
-      padding: 15px;
-      text-align: left;
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background: #2c7d6e; 
-      color: #fff;
-      font-weight: bold;
-    }
-
-    .interests {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    .interests li {
-      display: inline-block;
-      background: #ff6b6b; 
-      color: #fff;
-      padding: 10px 20px;
-      margin: 8px;
-      border-radius: 25px;
-      font-size: 16px;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: background 0.3s, transform 0.3s;
-      cursor: pointer;
-    }
-
-    .interests li:hover {
-      background: #e55a5a; 
-      transform: scale(1.05);
-    }
-
-    .progress-section {
-      background: #fff8e1;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 30px 40px;
-      }
-      h1 {
-        font-size: 2.2rem;
-      }
-      img {
-        float: none;
-        display: block;
-        margin: 0 auto 20px;
-      }
-      table {
-        font-size: 14px;
-      }
-    }
-
-    @media print {
-      body {
-        background: white;
-      }
-      .container {
-        box-shadow: none;
-        margin: 0;
-      }
-      .interests li {
-        background: none;
-        color: black;
-        border: 1px solid black;
-      }
+    @media(max-width:480px){
+      body{padding:12px;}
+      .photo{width:150px;height:150px;}
+      .header{padding:18px;}
+      .main,.sidebar{padding:18px;}
+      .name{font-size:20px;}
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="DONS.jpg.jpg" alt="Photo of Donalen Grace C. Rico">
-    <h1>Donalen Grace C. Rico</h1>
-    <address>
-      <b>Daraga, Albay</b><br>
-      +63 915-008-5830<br>
-      <a href="mailto:donalengracecortez.rico24@bicol-u.edu.ph">donalengracecortez.rico24@bicol-u.edu.ph</a>
-    </address>
-    <hr>
+  <div class="resume">
+    <div class="header">
+      <div class="header-left">
+        <h1 class="name">Donalen Grace C. Rico</h1>
+        <div class="title">Bachelor of Science in Information Systems</div>
+      </div>
+      <div class="header-right">
+        <div><strong>Daraga, Albay</strong></div>
+        <div style="margin-top:6px"><a href="mailto:donalengracecortez.rico24@bicol-u.edu.ph">donalengracecortez.rico24@bicol-u.edu.ph</a></div>
+        <div style="margin-top:6px">+63 915-008-5830</div>
+      </div>
+    </div>
 
-    <section>
-      <h2>About Me</h2>
-      <p>Hello! I'm <b>Donalen Grace C. Rico</b>, a passionate student exploring the dynamic world of programming with a focus on <strong><i><u>HTML and CSS</u></i></strong>. I'm dedicated to developing innovative web solutions and expanding my expertise in <i>Information Technology</i>, particularly in responsive web development. Through hands-on projects, I've grown from basics to creating interactive, user-friendly designs.</p>
-      <p>I love <mark>laying out designs</mark>, because I believe:</p>
-      <blockquote>"It's an art form that brings ideas to life."</blockquote>
-    </section>
+    <main class="main">
 
-    <hr>
+      <section class="about">
+        <h2>About</h2>
+        <div class="box">
+          <p>Hello! I'm <strong>Donalen Grace C. Rico</strong>, a passionate student exploring programming focused on <strong>HTML</strong> and <strong>CSS</strong>. I enjoy transforming Figma designs into responsive, accessible web pages while growing into front-end development.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>Recent Progress & Achievements</h2>
-      <div class="progress-section">
-        <p>Since starting my journey in web development, I've improved my HTML and CSS skills. Here's my progress:</p>
-        <ul>
-          <li><b>HTML/CSS:</b> Completed multiple projects, including this responsive CV, showing skills in markup and styling.</li>
-          <li><b>Skills Learned:</b> Advanced from basic C++ to integrating Figma for UI/UX design in web projects.</li>
-          <li><b>Recent Milestone:</b> Built a prototype for "Book Beats" using Figma.</li>
-          <li><b>Future Goals:</b> Aim to learn JavaScript for interactivity and contribute to web projects.</li>
+      <section>
+        <h2>Recent Progress & Achievements</h2>
+        <div class="box">
+          <ul class="clean">
+            <li><strong>HTML/CSS:</strong> Completed responsive CV templates.</li>
+            <li><strong>Figma:</strong> Built prototypes and translated UI to code.</li>
+            <li><strong>C++ Basics:</strong> Programming foundation from Bicol University.</li>
+            <li><strong>Goals:</strong> Learn JavaScript and collaborate on web projects.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience & Projects</h2>
+        <div class="box">
+          <div class="exp-item">
+            <div class="exp-head">
+              <div>
+                <div class="exp-role">Student Projects</div>
+                <div class="exp-company">Bicol University Polangui — Coursework</div>
+              </div>
+              <div class="exp-dates">2024–Present</div>
+            </div>
+            <ul class="clean">
+              <li>Designed Book Beats prototype in Figma.</li>
+              <li>Implemented UI in HTML/CSS.</li>
+              <li>Conceptualized basic DBMS using SQL foundations.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-head">
+              <div>
+                <div class="exp-role">Volunteer & Extracurricular</div>
+                <div class="exp-company">Community Workshops & IE Committee</div>
+              </div>
+              <div class="exp-dates">2022–Present</div>
+            </div>
+            <ul class="clean">
+              <li>Volunteer in youth development activities.</li>
+              <li>Member of IE Program Relations Committee.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="box">
+          <p><strong>Bachelor of Science in Information Systems</strong><br>Bicol University (2024–Present)<br><em>Focus: Web Development, Database Management</em></p>
+          <p><strong>Senior High School</strong><br>Malabog National High School (2022–2024) — STEM</p>
+          <p><strong>Junior High School</strong><br>Malabog National High School (2019–2022) — With Honors</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certifications & Awards</h2>
+        <div class="box">
+          <ul class="clean">
+            <li>Outstanding Performance in Arts — SHS (2022)</li>
+            <li>Award for Research & Innovation — SHS (2024)</li>
+            <li>Participation Certificate — Children International (2025)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="photo-wrap">
+        <img class="photo" src="Dons.jpg" alt="Photo of Donalen Grace C. Rico">
+      </div>
+
+      <h2>Skills</h2>
+      <div class="box">
+        <div class="pills">
+          <div class="pill">HTML</div>
+          <div class="pill">CSS</div>
+          <div class="pill">Responsive Design</div>
+          <div class="pill">Figma</div>
+          <div class="pill">C++ Basics</div>
+          <div class="pill">UI/UX</div>
+        </div>
+      </div>
+
+      <h2>Software</h2>
+      <div class="box">
+        <ul class="clean">
+          <li>Figma</li>
+          <li>VS Code</li>
+          <li>Basic SQL</li>
         </ul>
       </div>
-    </section>
 
-    <hr>
+      <h2>Languages</h2>
+      <div class="box">
+        <ul class="clean">
+          <li>English — Fluent</li>
+          <li>Tagalog — Fluent</li>
+          <li>Spanish — Conversational</li>
+        </ul>
+      </div>
 
-    <section>
-      <h2>Personal Information</h2>
-      <ul>
-        <li><b>Name:</b> Donalen Grace C. Rico</li>
-        <li><b>Age:</b> 19 years old</li>
-        <li><b>Date of Birth:</b> March 03, 2006</li>
-        <li><b>Address:</b> Daraga, Albay</li>
-        <li><b>Place of Birth:</b> Taguig City</li>
-        <li><b>Civil Status:</b> Single</li>
-        <li><b>Sex:</b> Female</li>
-      </ul>
-      <p><b>Dialects Spoken:</b> English, Tagalog, Spanish</p>
-      <p><b>Preferred Country:</b> Philippines</p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Education</h2>
-      <p><b>Bachelor of Science in Information Systems</b><br>
-      Bicol University (2024–Present)<br>
-      <em>Focus: Web Development, Database Management, and IT Fundamentals</em></p>
-      <p><b>Senior High School</b><br>
-      Malabog National High School (2022–2024)<br>
-      <em>Strand: STEM (Science, Technology, Engineering, and Mathematics)</em></p>
-      <p><b>Junior High School</b><br>
-      Malabog National High School (2019–2022)<br>
-      <em>Achievement: Graduated with Honors</em></p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Certifications & Awards</h2>
-      <ul>
-        <li><b>School Award:</b> Outstanding Performance in Arts (Senior High School, 2022)</li>
-        <em>Award for Research and Innovation (Senior High School, 2024)</em>
-        <li><b>Participation Certificate:</b> Children International Bicol Inc. (2025)</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Skills</h2>
-      <p>As a beginner in programming, I'm building foundational skills through practice and coursework:</p>
-      <ul>
-        <li><b>Arts and Design:</b> Creating visual concepts and layouts</li>
-        <li><b>C++ Basics:</b> Understanding programming logic and simple code</li>
-        <li><b>Figma:</b> Basic UI/UX prototyping</li>
-        <li><b>HTML and CSS:</b> Building and styling web pages</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2>Experience & Projects</h2>
-      <table>
-        <tr>
-          <th>Experiences</th>
-          <th>Projects</th>
-        </tr>
-        <tr>
-          <td>
-            <b>Student Projects</b>
-            <ul>
-              <li>Learned Basic C++ – Bicol University Polangui (2024–2025)</li>
-              <li>Learned Basic Figma – Bicol University Polangui (2024–2025)</li>
-              <li>Ongoing: HTML/CSS Web Development Practice</li>
-            </ul>
-            <b>Extracurricular Activities</b>
-            <ul>
-              <li>Member of the IE Program Relations Committee (2024–Present)</li>
-              <li>Volunteer in Community Youth Sessions (2022-Present)</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li><b>Book Beats Prototype:</b> Designed in Figma; translated to HTML/CSS for a music-book app interface. Focused on user-friendly layouts.</li>
-              <li><b>Database Management System:</b> Conceptual design for data handling in web apps; learned basic SQL integration.</li>
-              <li><b>Web Development Portfolio:</b> This CV – showcases responsive design and CSS animations. Built from scratch as a beginner project.</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </section>
-
-    <hr>
-
-    <section>
       <h2>Interests</h2>
-      <ul class="interests">
-        <li>Web Development</li>
-        <li>Instruments</li>
-        <li>Reading</li>
-        <li>Arts and Design</li>
-      </ul>
-    </section>
+      <div class="box">
+        <div class="interests">
+          <div class="interest">Web Dev</div>
+          <div class="interest">Instruments</div>
+          <div class="interest">Reading</div>
+          <div class="interest">Arts & Design</div>
+        </div>
+      </div>
+    </aside>
 
-    <hr>
-
-    <div class="footer">
-      <p>Thank you for reviewing my CV! I'm excited to continue growing in IT. <a href="mailto:donalengracecortez.rico24@bicol-u.edu.ph">Let's connect</a>.</p>
-    </div>
+    <div class="footer">Thank you for reviewing my CV — excited to grow in IT!</div>
   </div>
 </body>
 </html>
